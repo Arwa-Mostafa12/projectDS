@@ -1,3 +1,14 @@
+## 1404711 - Data Structures Project
+## Task Scheduler & Job History Manager - Project 1
+
+# Name 				 		   	        ID
+# Arwa Mostafa Abo Elhoda Mohamed 	  	1404-3-313
+# Jouirya Zaki Moustafa Zaki Moustafa 	1404-3-376
+# Mariam Ahmed Abdelhaleem			   	1404-3-003
+# Maryam Abd El Moneim Mohamed Hussein	1404-3-262
+
+
+
 import json                               # Import JSON module to save/load task data
 import os                                 # Import OS module to check file existence
 import time                               # Import time module for delays
@@ -5,6 +16,14 @@ from Task_class import Task
 from Queue_class import TaskQueue
 from LL_hist_class import TaskHistory
 from Hash_table_class import HashTable
+
+# ANSI colors
+RESET = "\033[0m"
+BOLD = "\033[1m"
+BLUE = "\033[96m"
+YELLOW = "\033[93m"
+PINK = "\033[95m"
+
 
 class Scheduler:
     # initialize the scheduler with empty queue, history, hash table and json file
@@ -127,9 +146,9 @@ if __name__ == "__main__":
     scheduler = Scheduler()
     # Main loop: display menu, get user choice, execute action, wait 5 seconds
     while True:
-        print("\n" + "=" * 40)
-        print("Task Scheduler Menu")
-        print("=" * 40)
+        print("\n" + BLUE +"=" * 40)
+        print(BOLD + BLUE + "Task Scheduler & Job History Manager" + RESET)
+        print(BLUE + "=" * 40 + RESET)
         print("1) Submit new task")
         print("2) Run next task")
         print("3) Run all tasks")
@@ -178,7 +197,7 @@ if __name__ == "__main__":
 
             # exit program
             case "0":
-                print("Exiting program. Bye!")
+                print("Exiting program. "+ PINK + "Bye!" + RESET)
                 break
 
             # invalid choice
@@ -186,6 +205,7 @@ if __name__ == "__main__":
                 print("Invalid choice. Please try again.")
 
         # Wait 5 seconds before showing the menu again (unless user chose to exit)
-        print("\nReturning to menu in 5 seconds...")
-        time.sleep(5)
+        for i in range(5, 0, -1):
+            print(f"\n\r{YELLOW}Returning to menu in {i}...{RESET}\n", end="", flush=True)
+            time.sleep(1)
 
