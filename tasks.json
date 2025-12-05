@@ -1,94 +1,30 @@
 {
-    "queue": [],
+    "queue": [
+        {
+            "job_id": 105,
+            "description": "Scan Logs",
+            "status": "in_queue"
+        },
+        {
+            "job_id": 95,
+            "description": "Clean Cashe",
+            "status": "in_queue"
+        },
+        {
+            "job_id": 60,
+            "description": "Back Up DB",
+            "status": "in_queue"
+        }
+    ],
     "history": [
         {
-            "job_id": 1,
-            "description": "world! Maryam",
-            "status": "done"
-        },
-        {
-            "job_id": 2,
-            "description": "Hello this is maryam",
-            "status": "done"
-        },
-        {
-            "job_id": 95,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 95,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 95,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 100,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 102,
-            "description": "Train ML model",
-            "status": "done"
-        },
-        {
-            "job_id": 101,
-            "description": "Clean database",
-            "status": "done"
-        },
-        {
-            "job_id": 106,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
             "job_id": 45,
-            "description": "Deploy app",
+            "description": "Clean Database",
             "status": "done"
         },
         {
-            "job_id": 100,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 95,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 95,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 50,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 50,
-            "description": "Deploy app",
-            "status": "done"
-        },
-        {
-            "job_id": 54,
-            "description": "DESC",
-            "status": "done"
-        },
-        {
-            "job_id": 12,
-            "description": "description",
-            "status": "done"
-        },
-        {
-            "job_id": 25,
-            "description": "help",
+            "job_id": 120,
+            "description": "Deploy App",
             "status": "done"
         }
     ]
