@@ -34,3 +34,7 @@ class TaskHistory:
                                            # Add task data as dictionary
             curr = curr.next              # Move to the next node
         return result                     # Return list of last N tasks
+
+    # delete all history from the linked list
+    def clear_history(self):
+        self.head = None                  # Set head to None to clear the entire linked list

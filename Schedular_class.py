@@ -114,7 +114,7 @@ class Scheduler:
         if self.queue.is_empty():
             print("No tasks in queue.")
         else:
-            for task in self.queue.queue:
+            for task in self.queue:
                 # print job id and status
                 print(f"Job {task.job_id} → Status: {task.status}")
 
@@ -133,6 +133,12 @@ class Scheduler:
         # display history from linked list
         self.history.display_history()
 
+    # delete all history from the linked list
+    def clear_history(self):
+        self.history.clear_history()      # Clear all history from the linked list
+        self.save_state()                 # Save changes to JSON
+        print("\nAll history has been cleared.")
+
 # Main program
 if __name__ == "__main__":
     scheduler = Scheduler()
@@ -147,6 +153,7 @@ if __name__ == "__main__":
         print("4) Display all tasks (queue + history)")
         print("5) Find job by ID")
         print("6) Display history only")
+        print("7) Clear all history")
         print("0) Exit")
         # get user choice and match with case
         choice = input("\nEnter your choice: ").strip()
@@ -186,6 +193,10 @@ if __name__ == "__main__":
             # display history only
             case "6":
                 scheduler.display_history_only()
+
+            # clear all history
+            case "7":
+                scheduler.clear_history()
 
             # exit program
             case "0":
